@@ -1,0 +1,27 @@
+Data Loading and Preprocessing: We load the dataset, handle missing values by imputing the mean, separate features from the target variable, and standardize the features for better model performance.
+Supervised Learning: We use Logistic Regression to predict the 'Approved' status of applications. The model is trained on a subset of the data and evaluated on another to assess its performance.
+Unsupervised Learning: We apply K-Means clustering to group applicants based on their features without using the 'Approved' label. The clusters are visualized to identify any natural groupings.
+
+
+Output:
+
+CustomerID  A1     A2     A3  A4  A5  ...  A10  A11  A12  A13   A14  Class
+0    15776156   1  22.08  11.46   2   4  ...    0    1    2  100  1213      0
+1    15739548   0  22.67   7.00   2   8  ...    0    0    2  160     1      0
+2    15662854   0  29.58   1.75   1   4  ...    0    1    2  280     1      0
+3    15687688   0  21.67  11.50   1   5  ...   11    1    2    0     1      1
+4    15715750   1  20.17   8.17   2   6  ...   14    0    2   60   159      1
+
+[5 rows x 16 columns]
+Index(['CustomerID', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9',
+       'A10', 'A11', 'A12', 'A13', 'A14', 'Class'],
+      dtype='object')
+Accuracy: 0.8454106280193237
+              precision    recall  f1-score   support
+
+         0.0       0.87      0.87      0.87       126
+         1.0       0.80      0.80      0.80        81
+
+    accuracy                           0.85       207
+   macro avg       0.84      0.84      0.84       207
+weighted avg       0.85      0.85      0.85       207
